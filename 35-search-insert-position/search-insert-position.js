@@ -8,13 +8,11 @@ var searchInsert = function(nums, target) {
         return nums.indexOf(target);
     }
 
-    const biggerThanTargetIndex = nums.findIndex(num => num > target);
+    const missingNumberIndex = nums.findIndex(num => num > target);
 
-    console.log(biggerThanTargetIndex)
-
-    if (biggerThanTargetIndex === -1) {
+    if (missingNumberIndex === -1) {
         return nums.length;
     } else {
-        return biggerThanTargetIndex;
+        return missingNumberIndex;
     }
 };
